@@ -1,0 +1,71 @@
+﻿<Window x:Class="LessonLern.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LessonLern"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\ClassUser\Desktop\wpf_task\LessonLern\LessonLern\images\reglogpic.jpg"/>
+        </Grid.Background>
+        <StackPanel x:Name="stackPanelMain">
+        
+            <StackPanel x:Name="stackPanel1" Margin="0, 130, 0, 0">
+                <TextBlock x:Name="loginText"
+                           Text="Логин"
+                           TextAlignment="Center"
+                           Foreground="White"/>
+
+                <TextBox x:Name="textBoxLogin"
+                         MaxLength="20"
+                         Height="30"
+                         Width="150"
+                         AcceptsReturn="False"
+                         TextAlignment="Center"/>
+
+                <TextBlock x:Name="passText"
+                           Text="Пароль"
+                           TextAlignment="Center"
+                           Margin="0, 6, 0, 0"
+                           Foreground="White"/>
+
+                <PasswordBox x:Name="passBox"
+                             PasswordChar="*"
+                             Height="30"
+                             Width="150"
+                             HorizontalContentAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel x:Name="stackPanel2" Margin="0, 10, 0, 0">
+                <Button x:Name="LoginButton"
+                        Content="Войти"
+                        Width="100"
+                        Height="25"
+                        Background="#DA49AA"
+                        BorderBrush="#DA49AA"
+                        Click="Enter_Click"
+                        Foreground="White"/>
+
+                <CheckBox x:Name="checkBox"
+                          IsThreeState="False"
+                          IsChecked="False"
+                          Height="20"
+                          Width="90"
+                          Margin="0, 5, 0, 0"
+                          Content="Запомнить"
+                          Foreground="White"/>
+
+                <Button x:Name="gotoReg"
+                        Content="Регистрация"
+                        BorderBrush="#DA49AA"
+                        Background="#DA49AA"
+                        Width="94"
+                        Foreground="White"
+                        Click="gotoReg_Click"/>
+                    
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,101 @@
+﻿<Window x:Class="LessonLern.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LessonLern"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="MainGrid">
+        
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\ClassUser\Desktop\wpf_task\LessonLern\LessonLern\images\reglogpic.jpg"/>
+        </Grid.Background>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="499*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="stackPanelMain"
+                    Grid.Column="0">
+
+            <StackPanel x:Name="stackPanel1" 
+                        Grid.Column="0"
+                        Margin="0, 100, 0, 0">
+
+                <TextBlock x:Name="textBlock4"
+                           Text="Логин"
+                           HorizontalAlignment="Right"
+                           FontSize="15"
+                           Foreground="white"/>
+
+                <TextBlock x:Name="textBlock5"
+                           Text="Пароль"
+                           HorizontalAlignment="Right"
+                           FontSize="15"
+                           Margin="0, 20, 0, 0"
+                           Foreground="white"/>
+
+                <TextBlock x:Name="textBlock6"
+                           Text="Повторите"
+                           HorizontalAlignment="Right"
+                           FontSize="15"
+                           Margin="0, 20, 0, 0"
+                           Foreground="white"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel x:Name="stackPanelMain2"
+                    Grid.Column="1" Grid.ColumnSpan="2">
+
+
+            <StackPanel x:Name="stackPanelPassMail"
+                        Grid.Column="1"
+                        Margin="0, 100, 0, 0">
+
+                <TextBox x:Name="mailBox"
+                         FontSize="15"
+                         Margin="10, 0, 0, 0"
+                         HorizontalAlignment="Left"
+                         Width="250"/>
+
+                <PasswordBox x:Name="passBox"
+                         FontSize="15"
+                         Margin="10, 20, 0, 0"
+                         HorizontalAlignment="Left"
+                         Width="250"
+                         PasswordChar="*"/>
+
+                <PasswordBox x:Name="repassBox"
+                         FontSize="15"
+                         Margin="10, 20, 0, 0"
+                         HorizontalAlignment="Left"
+                         Width="250"
+                         PasswordChar="*"/>
+
+            </StackPanel>
+
+            <StackPanel x:Name="stackPanelOK"
+                        Grid.Column="1">
+
+                <Button x:Name="agreedReg"
+                        Width="117"
+                        Height="25"
+                        Content="Зарегистрироваться"
+                        HorizontalAlignment="Left"
+                        Margin="10, 20, 0, 0"
+                        Background="#DA49AA"
+                        BorderBrush="#DA49AA"
+                        Click="agreedReg_Click"
+                        Foreground="white"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
